@@ -1,19 +1,24 @@
 import React, { Component } from 'react'; 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+// import Hello  from './Hello.js';
+
+import TodoTemplate from './todolist/TodoTemplate.js';
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          {/* <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p> */}
         </header>
         <div>
           test
-        </div>
+          <Hello
+            person={this.state.personData}
+          />
+        </div> */}
+        <TodoTemplate></TodoTemplate>
       </div>
     )
   }
@@ -39,6 +44,13 @@ class App extends Component {
         }
       ]
     }
+    console.log('App.js constructor')
+  }
+  componentDidMount () {
+    // 컴포넌트가 마운트된 직후
+    // 데이터 구독하기 좋은 시점
+    // 네트워크 요청 보내는 시점
+    console.log('App.js mount')
   }
 }
 export default App;
