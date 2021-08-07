@@ -1,12 +1,9 @@
-import { Component } from 'react'
+import React from 'react'
 import './TodoListItem.scss'
 
-class TodoListItem extends Component {
-  render () {
-    return (
-      <div></div>
-    )
-  }
+function TodoListItem () {
+  return (
+    <div>list item</div>
+  )
 }
-
 export default TodoListItem

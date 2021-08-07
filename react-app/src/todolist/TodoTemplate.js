@@ -1,17 +1,17 @@
-import { Component } from 'react'; 
 import './TodoTemplate.scss';
 
 import TodoTitle from './TodoTitle'
 import TodoInsert from './TodoInsert'
+import TodoList from './TodoList'
 
-class TodoTemplate extends Component {
-  render () {
-    return (
-      <div className="todo-template">
-        <TodoTitle />
-        <TodoInsert />
-      </div>
-    )
-  }
+
+function TodoTemplate() {
+  return (
+    <div className="todo-template">
+      <TodoTitle />
+      <TodoInsert />
+      <TodoList />
+    </div>
+  )
 }
 export default TodoTemplate;
