@@ -9,16 +9,21 @@ function TodoListItem ({todo, onRemove, onToggle}) {
 
   return (
     <div className="todo-item">
-      <div onClick={() => {onToggle(idx)}}>
-        {checked ? <GrCheckboxSelected size="25" />  : <GrCheckbox size="25" />  }
+      <div
+        className="check-box" 
+        onClick={() => {onToggle(idx)}}
+      >
+        {checked ? <GrCheckboxSelected size="20" />  : <GrCheckbox size="20" />  }
       </div>
-      <div>
+      <div className="todo-item-content">
         {content}
       </div>
-      <BiTrash 
-        size="30"
-        onClick={() => {onRemove(idx)}}
-      />
+      <div className="delete-btn">
+        <BiTrash 
+          size="25"
+          onClick={() => {onRemove(idx)}}
+        />
+      </div>
     </div>
   )
 }
