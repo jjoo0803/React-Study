@@ -29,11 +29,24 @@ function TodoTemplate() {
     todoIdx.current += 1
   }
 
+  const remove = (idx) => {
+    console.log('remove', idx)
+    setTodos(todos.filter((todo) => {
+      return todo.idx !== idx
+    }))
+  }
+
+  const toggle = (idx) => {
+   setTodos(todos.map((todo) => {
+     return todo.idx === idx ? {...todo, checked: !todo.checked} : todo
+   }))
+  }
+
   return (
     <div className="todo-template">
       <TodoTitle />
       <TodoInsert addList={addList}/>
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} onRemove={remove} onToggle={toggle}/>
     </div>
   )
 }
