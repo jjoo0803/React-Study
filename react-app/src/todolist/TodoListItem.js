@@ -13,7 +13,7 @@ function TodoListItem ({todo, onRemove, onToggle}) {
         className="check-box" 
         onClick={() => {onToggle(idx)}}
       >
-        {checked ? <GrCheckboxSelected size="20" />  : <GrCheckbox size="20" />  }
+        {checked ? <GrCheckboxSelected size="20" />  : <GrCheckbox size="20" />}
       </div>
       <div className="todo-item-content">
         {content}
